@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    /* el header fijo mide 80px: evita que los anchors queden debajo */
+    scroll-padding-top: 96px;
+  }
+
+  body {
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .material-symbols-outlined {
+    font-family: 'Material Symbols Outlined';
+    font-weight: normal;
+    font-style: normal;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  }
+}
+
+@layer components {
+  .skill-tag {
+    @apply bg-surface-container border border-outline-variant/60 transition-all duration-300 ease-soft;
+  }
+
+  .skill-tag:hover {
+    @apply border-primary/60 bg-primary-fixed text-primary -translate-y-0.5;
+  }
+
+  /* Superficie 3D compartida por avatar y cards */
+  .tilt-surface {
+    transform-style: preserve-3d;
+    will-change: transform;
+  }
+}
+
+/* Respeta la preferencia del sistema: sin movimiento, sin sorpresas */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

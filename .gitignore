@@ -1,0 +1,11 @@
+node_modules
+dist
+dist-ssr
+*.local
+.DS_Store
+.vite
+
+# config local de editores/herramientas
+.vscode
+.idea
+.claude
