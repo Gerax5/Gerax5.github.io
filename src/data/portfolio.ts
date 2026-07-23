@@ -1,4 +1,5 @@
 import avatar from '@/assets/foto-perfil.jpeg'
+import cv from '@/assets/CV Gabriel Pineda.pdf'
 import picolin from '@/assets/Picolin.png'
 import eden from '@/assets/eden.png'
 import translate from '@/assets/translate.png'
@@ -44,7 +45,7 @@ export interface SocialLink {
   url: string
 }
 
-export const brand = 'DEV.GERAX'
+export const brand = 'GERAX'
 
 export const navLinks: NavLink[] = [
   { id: 'about', label: 'About' },
@@ -58,6 +59,7 @@ export const profile = {
   role: 'Fullstack Developer · Web & Mobile',
   email: 'ggerardopineda06@gmail.com',
   avatar,
+  cv,
   bio: [
     'I\'m the kind of person who can\'t leave a problem alone once it has my attention. Give me something that doesn\'t quite work and I\'ll keep turning it over until it clicks. that\'s the part of this job I actually enjoy, more than any particular tool or framework.',
     'I like understanding why something is broken before deciding how to fix it, and I\'d rather ask an uncomfortable question early than find the real problem three weeks in. I work best with a team around me, and I\'m most useful when someone hands me a mess and asks what to do with it.',
@@ -115,8 +117,8 @@ export const projects: Project[] = [
       'A full-stack e-commerce platform for Picolin, featuring product catalog, cart and checkout flow, inventory management and an admin panel for orders and sales tracking.',
     image:
       picolin,
-    tags: ['React', 'Graphql','postgres', 'AWS'],
-    demoUrl: '#',
+    tags: ['React', 'VITE', 'Graphql','postgres', 'AWS'],
+    demoUrl: 'https://picolin.shop',
     codeUrl: 'https://github.com/angelargd8/Proyecto-software',
   },
   {
@@ -125,7 +127,7 @@ export const projects: Project[] = [
       'A real estate platform with an interactive plot map, letting buyers explore availability in real time, plus an admin dashboard to manage listings and track sales metrics.',
     image:
       eden,
-    tags: ['Next', 'nestJS', 'Typescript', 'AWS'],
+    tags: ['NextJS', 'nestJS', 'Typescript', 'AWS'],
     demoUrl: 'https://praderasdelalto.com.gt/',
     codeUrl: 'https://github.com/PraderasDelAlto/Eleden',
   },

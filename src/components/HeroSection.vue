@@ -34,7 +34,9 @@ import { profile } from '@/data/portfolio'
 
       <div v-reveal="240" class="mt-stack-lg flex flex-wrap justify-center gap-stack-md">
         <AppButton href="#projects" icon="arrow_downward">View Projects</AppButton>
-        <AppButton href="#" variant="outlined" icon="download">Download CV</AppButton>
+        <AppButton :href="profile.cv" download="CV Gabriel Pineda.pdf" variant="outlined" icon="download"
+          >Download CV</AppButton
+        >
       </div>
     </div>
   </section>
