@@ -37,6 +37,7 @@ defineProps<{ project: Project }>()
 
       <div class="flex gap-stack-md">
         <a
+          v-if="project.demoUrl"
           :href="project.demoUrl"
           class="group/link flex items-center gap-1 font-semibold text-primary transition-colors duration-300 hover:text-primary-container"
         >
