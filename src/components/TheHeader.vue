@@ -43,8 +43,6 @@ function movePill() {
 
 watch(targetId, () => nextTick(movePill))
 
-// El -50% vertical va aquí y no como clase: este `transform` inline sobrescribe
-// cualquier utilidad de Tailwind, así que el centrado tiene que viajar con él.
 const pillStyle = computed(() => ({
   transform: `translate3d(${pill.value.x}px, -50%, 0)`,
   width: `${pill.value.width}px`,

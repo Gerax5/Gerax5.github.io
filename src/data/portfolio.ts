@@ -1,3 +1,9 @@
+import avatar from '@/assets/foto-perfil.jpeg'
+import picolin from '@/assets/Picolin.png'
+import eden from '@/assets/eden.png'
+import translate from '@/assets/translate.png'
+import ds from '@/assets/ds.png'
+
 export interface NavLink {
   id: string
   label: string
@@ -28,7 +34,7 @@ export interface Project {
   description: string
   image: string
   tags: string[]
-  demoUrl: string
+  demoUrl?: string
   codeUrl: string
 }
 
@@ -38,7 +44,7 @@ export interface SocialLink {
   url: string
 }
 
-export const brand = 'DEV.SOLO'
+export const brand = 'DEV.GERAX'
 
 export const navLinks: NavLink[] = [
   { id: 'about', label: 'About' },
@@ -48,65 +54,55 @@ export const navLinks: NavLink[] = [
 ]
 
 export const profile = {
-  name: 'Jane Doe',
+  name: 'Gerardo Pineda',
   role: 'Fullstack Developer · Web & Mobile',
-  email: 'hello@devsolo.com',
-  avatar:
-    'https://lh3.googleusercontent.com/aida-public/AB6AXuB4uTfpWRBwv4Cez2xtyLI8AiNb3_c3Rv4Gt7BDp6ErdhFOH5kAEFd_XSr5y4NsI8U1NZXiSTAQ9CODg9zalQNuRCKbB-JYYleR6SXlCIllqRqSlooZ05M0ekDW7dJYHduI93U22U3H7cYzg-16_Y5W-5m7nHvodsBfyc74L3o7wbGrR79iIUZlE21P9HPU1gpISJ_UNrpRnRY3bVduvHMjEdB9PuOU3biUkk8Gw2PxZ5UOqxTxTRgpV0pvzZD2Pgs_KrhgggUkqoA',
+  email: 'ggerardopineda06@gmail.com',
+  avatar,
   bio: [
-    'I am a fullstack developer with a passion for building elegant, functional, and user-centric digital experiences. Currently in my final year of university, specializing in Artificial Intelligence, I bridge the gap between complex technical architectures and intuitive frontend interfaces.',
-    'My approach is rooted in "quiet authority"—letting the quality of the code and the clarity of the design speak for themselves. Whether it\'s a high-performance web application or a smooth cross-platform mobile app, I focus on delivering scalable solutions that solve real-world problems.',
+    'I\'m the kind of person who can\'t leave a problem alone once it has my attention. Give me something that doesn\'t quite work and I\'ll keep turning it over until it clicks. that\'s the part of this job I actually enjoy, more than any particular tool or framework.',
+    'I like understanding why something is broken before deciding how to fix it, and I\'d rather ask an uncomfortable question early than find the real problem three weeks in. I work best with a team around me, and I\'m most useful when someone hands me a mess and asks what to do with it.',
   ],
 }
 
 export const skillGroups: SkillGroup[] = [
-  { title: 'Frontend', items: ['React', 'Vue.js', 'Tailwind CSS', 'TypeScript'] },
-  { title: 'Backend', items: ['Node.js', 'PostgreSQL', 'GraphQL', 'Docker'] },
-  { title: 'Mobile', items: ['Flutter', 'React Native'] },
+  { title: 'Languages',       items: ['TypeScript', 'JavaScript', 'Python', 'Go', 'Java', 'Kotlin', 'PHP'] },
+  { title: 'Frontend',        items: ['React', 'React Native', 'Tailwind CSS', 'HTML', 'CSS'] },
+  { title: 'Backend & Cloud', items: ['FastAPI', 'Django', 'REST APIs', 'AWS', 'Google Cloud'] },
+  { title: 'Data',            items: ['PostgreSQL', 'MySQL', 'Oracle', 'MongoDB', 'Neo4j'] },
+  { title: 'Automation',      items: ['Docker', 'CI/CD', 'GitHub Actions'] },
 ]
 
 export const timeline: TimelineEntry[] = [
   {
-    company: 'Tech Corp',
+    company: 'Grupo Cayalá',
     period: 'Jun 2023 — Present',
     highlight: true,
     roles: [
       {
-        title: 'Junior Software Engineer',
-        period: 'Jan 2024 — Present',
+        title: 'Policy and Procedure Analyst',
+        period: 'Feb 2026 — Present',
         description:
-          'Promoted to full-time role; leading development of core data visualization features and mentoring incoming interns.',
+          'Map and redesign manual company processes for automation and digital delivery, then draft the policies that turn those redesigns into company-wide standards. The role sits between operations and engineering: deciding which workflows are worth automating, specifying how they should behave, and documenting the rules the resulting systems enforce.',
         current: true,
       },
-      {
-        title: 'Software Engineering Intern',
-        period: 'Jun 2023 — Dec 2023',
-        description:
-          'Developing real-time data visualization components for cloud monitoring dashboards, reducing API latency by 15% through optimized caching strategies.',
-      },
+      
     ],
   },
   {
-    company: 'UI Framework Core Team',
-    period: 'JAN 2022 — MAY 2023',
+    company: 'Fundación de la Universidad del Valle de Guatemala | EXPLORAX',
+    period: 'May 2024 — Dec 2025',
     roles: [
       {
-        title: 'Open Source Contributor',
-        period: 'JAN 2022 — MAY 2023',
+        title: 'Coordinador Frontend',
+        period: 'jan 2024 — Dec 2024',
         description:
-          'Authored and maintained 10+ reusable components and utility modules, improving documentation accessibility for 5,000+ weekly users.',
+          'Led the frontend team under SCRUM, defining code quality standards and review practices. Designed and shipped an automatic asset-download system for the app, and replaced manual delivery steps with automated workflows. Owned the supporting AWS infrastructure (EC2, S3 and Lambda) including usage metrics collection.',
       },
-    ],
-  },
-  {
-    company: 'Creative Digital Agency',
-    period: 'SEPT 2021 — DEC 2021',
-    roles: [
       {
-        title: 'Junior Frontend Developer',
-        period: 'SEPT 2021 — DEC 2021',
+        title: 'Frontend Developer',
+        period: 'May 2024 — Dec 2024',
         description:
-          'Translated complex Figma designs into pixel-perfect, responsive landing pages for diverse luxury brands.',
+          "Built a STEAM e-learning mobile app with React Native and Expo, implementing the interface from the design team's specifications.",
       },
     ],
   },
@@ -114,35 +110,49 @@ export const timeline: TimelineEntry[] = [
 
 export const projects: Project[] = [
   {
-    name: 'Nexus Analytics',
+    name: 'Picolin',
     description:
-      'An enterprise-level data visualization platform built for real-time monitoring of cloud infrastructure.',
+      'A full-stack e-commerce platform for Picolin, featuring product catalog, cart and checkout flow, inventory management and an admin panel for orders and sales tracking.',
     image:
-      'https://lh3.googleusercontent.com/aida-public/AB6AXuDl-qHkSqG3dJ7BDV-dWexu6TpdgqbRWJDA0hGFCDsqmAiuYEWt844GG7PNzqbCf1CiOOftf2wUySyUPnR17hxaxD5XhOPRyr1WH5m8DNz-HYCTmiVFHltWs-r8ZaUqS8OL9NLvyY-H2EEUsShI5embEfuRyd4yWq0JAw-gETjlIpIvynHF-xyMSTn3P82cZ8PuyVabmsXsZcGCrKk-T_QvmmMTaXz6-Xd7B2LRQqQGPxI605oJ5UoWWm7dqZ5Qt7VWeHT6Qp0S4Pg',
-    tags: ['React', 'D3.js', 'AWS'],
+      picolin,
+    tags: ['React', 'Graphql','postgres', 'AWS'],
     demoUrl: '#',
-    codeUrl: '#',
+    codeUrl: 'https://github.com/angelargd8/Proyecto-software',
   },
   {
-    name: 'Pulse Mobile',
+    name: 'Eden',
     description:
-      'A high-performance cross-platform health tracking app with biometric integration and offline sync.',
+      'A real estate platform with an interactive plot map, letting buyers explore availability in real time, plus an admin dashboard to manage listings and track sales metrics.',
     image:
-      'https://lh3.googleusercontent.com/aida-public/AB6AXuDmni4vzNUbiBXIRORwQM7nvA7Vb99-lUXWTgqA7f9HbdJglGgx2esGV1ADodEI4bIGiyGNWRLsyx1ae42hPUu59PMy_Uf_vvW2wPH4BztwSYtw4iQy8gskPAXGPJfZpQeczDWvc3PKdg4meETztWP6g6fVNoZRXHIC8w7H8oQfz4NqgGSKxhLiUDH-OBB3Td8SvTUa53V1enL9-Usu6QlMo7ItFHJCeVRnes2F7o2oU-QkKeYJJOxVoKqYpMtW-3LS1Kh9jkf2ryM',
-    tags: ['Flutter', 'Firebase', 'GraphQL'],
-    demoUrl: '#',
-    codeUrl: '#',
+      eden,
+    tags: ['Next', 'nestJS', 'Typescript', 'AWS'],
+    demoUrl: 'https://praderasdelalto.com.gt/',
+    codeUrl: 'https://github.com/PraderasDelAlto/Eleden',
+  },
+  {
+    name: 'SpeakerSync',
+    description:
+      'An AI subtitle generator that segments video, applies speaker diarization and lip tracking to identify who is talking, and merges everything into speaker-labeled subtitles.',
+    image:
+      translate,
+    tags: ['Python'],
+    codeUrl: 'https://github.com/paulabaal12/PROY-VCP',
+  },
+  {
+    name: 'EssayScore',
+    description:
+      'An automated essay scoring system that classifies writing as effective, adequate or inadequate, comparing LSTM and Transformer architectures to benchmark model performance.',
+    image:
+      ds,
+    tags: ['Python'],
+    codeUrl: 'https://github.com/paulabaal12/PROY-VCP',
   },
 ]
 
 export const socials: SocialLink[] = [
-  { icon: 'link', label: 'Website', url: '#' },
-  { icon: 'alternate_email', label: 'Email', url: '#' },
-  { icon: 'terminal', label: 'GitHub', url: '#' },
 ]
 
 export const footerLinks: SocialLink[] = [
-  { icon: '', label: 'GitHub', url: '#' },
-  { icon: '', label: 'LinkedIn', url: '#' },
-  { icon: '', label: 'Twitter', url: '#' },
+  { icon: '', label: 'GitHub', url: 'https://github.com/Gerax5' },
+  { icon: '', label: 'LinkedIn', url: 'https://www.linkedin.com/in/gerardo-pineda-riveiro-1a58a839b/' },
 ]

@@ -6,8 +6,14 @@ withDefaults(
     icon?: string
     size?: 'md' | 'lg'
     magnet?: number
+    /**
+     * Nombre con el que se guarda el archivo. Necesario para los assets
+     * importados: Vite les añade un hash (`cv-a1b2c3d4.pdf`) y sin esto el
+     * navegador guardaría ese nombre.
+     */
+    download?: string
   }>(),
-  { variant: 'filled', icon: '', size: 'md', magnet: 10 },
+  { variant: 'filled', icon: '', size: 'md', magnet: 10, download: '' },
 )
 </script>
 
@@ -15,6 +21,7 @@ withDefaults(
   <a
     v-magnetic="magnet"
     :href="href"
+    :download="download || null"
     class="group relative inline-flex items-center gap-2 overflow-hidden rounded-full font-semibold transition-[background-color,color,border-color,box-shadow] duration-500 ease-soft"
     :class="[
       size === 'lg' ? 'px-10 py-5 text-lg' : 'px-8 py-4',
