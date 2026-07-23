@@ -18,7 +18,14 @@ import { profile, socials } from '@/data/portfolio'
       <div v-reveal="240" class="flex flex-col items-center gap-stack-lg">
         <div class="flex flex-wrap justify-center gap-stack-md">
           <AppButton :href="`mailto:${profile.email}`" size="lg">{{ profile.email }}</AppButton>
-          <AppButton href="#" variant="outlined" size="lg" icon="download">Download CV</AppButton>
+          <AppButton
+            :href="profile.cv"
+            download="CV Gabriel Pineda.pdf"
+            variant="outlined"
+            size="lg"
+            icon="download"
+            >Download CV</AppButton
+          >
         </div>
 
         <div class="mt-stack-md flex gap-stack-md">
