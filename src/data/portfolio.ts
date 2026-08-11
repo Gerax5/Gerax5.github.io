@@ -147,7 +147,7 @@ export const projects: Project[] = [
     image:
       ds,
     tags: ['Python'],
-    codeUrl: 'https://github.com/paulabaal12/PROY-VCP',
+    codeUrl: 'https://github.com/chuy-zip/PROYECTO2_DS',
   },
 ]
 
